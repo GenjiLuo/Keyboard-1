@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/css.css"/>
+    <script src="js/jquery.min.js"></script>
+    <link href="css/keyboard.css" rel="stylesheet">
+    <script src="js/keyboard.js"></script>
+    <script src="js/calc_lib_const.js"></script>
+    <script src="js/calc_lib_global.js"></script>
+    <script src="js/money_small_lump.js"></script>
+    <title>自定义键盘工具</title>
+</head>
+<body>
+<div class="B_layout">
+    <div class="titbar_02"><h3>零存整取</h3></div>
+    <div class="js_info">
+        <div class="js_row">
+            <ul class="js_top span6">
+                <li><input id="saveDate" type="date" class="require" value="2014-01-01"/><span>初始存入时间</span></li>
+                <li>
+                    <select id="depositPeriod">
+                        <option value="360">一年</option>
+                        <option value="1080">三年</option>
+                        <option value="1800">五年</option>
+                    </select>
+                    <span>存储存期</span>
+                </li>
+            </ul>
+        </div>
+        <div class="js_row">
+            <ul class="span6">
+                <li><input id="saveAmt" type="text" class="number require" placeholder="5元起存" maxlength="10"
+                           min="5"/><span>每月存入金额(元)</span></li>
+                <li><input id="rate" type="text" class="number require" value="2.85" placeholder="年利率"
+                           maxlength="4"/><span>年利率(%)</span></li>
+            </ul>
+        </div>
+        <div class="js_row">
+            <ul class="span6">
+                <li><span id="fullSum" class="amt">0.00</span><span class="amt_info">扣除利息税总额(暂不征收)</span></li>
+                <li><span id="totalAmt" class="amt">0.00</span><span class="amt_info">到期本息总额(元)</span></li>
+            </ul>
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="keyboard">
+        </div>
+    </div>
+</div>
+</body>
+</html>
